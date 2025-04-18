@@ -1,0 +1,7 @@
+mongodb:
+  uri: "mongodb:xxxx"
+  addresse:
+    - "127.0.0.1:27017"
+  username: "admin"
+  password: "pwd"
+  timeout: 10s

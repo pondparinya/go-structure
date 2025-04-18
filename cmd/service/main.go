@@ -1,8 +1,18 @@
 package main
 
-import "github.com/pondparinya/go-structure/internal/config"
+import (
+	"fmt"
+
+	"github.com/pondparinya/go-structure/internal/config"
+)
 
 func main() {
+	var cfg config.Config
 
-	cfg := config.Load()
+	err := config.Load("configs", "config", "yaml", &cfg)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("Loaded config: %+v\n", cfg)
 }
